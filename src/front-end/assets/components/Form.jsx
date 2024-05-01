@@ -4,7 +4,7 @@ import '../css/Form.css'
 export default function Form() {
     const [FormValues, setFormValues] = useState({
         name: '',
-        age: null,
+        age: '',
         cpf: '',
         position: '',
         salary: '',
@@ -21,15 +21,17 @@ export default function Form() {
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
-            const response = await fetch('/cadastrarFuncionario', {
+            const response = await fetch('http://localhost:3000/cadastrarFuncionario', {
                 method: 'POST',
                 headers: {
-                    'Content-type': 'application/json'
+                    "Content-type": "application/json"
                 },
                 body: JSON.stringify(FormValues)
             })
             const json = await response.json();
-            console.log(json);    
+            console.log(response);
+            console.log(json);  
+            console.log(`${FormValues}`);  
         } catch (err) {
             console.error(err);
         }
