@@ -21,7 +21,7 @@ export default function Form() {
     const handleSubmit = async (e) => {
         try {
             e.preventDefault();
-            const response = await fetch('http://localhost:3000/cadastrarFuncionario', {
+            const response = await fetch('http://localhost:3000/cadastrar/funcionario', {
                 method: 'POST',
                 headers: {
                     "Content-type": "application/json"
@@ -31,7 +31,6 @@ export default function Form() {
             const json = await response.json();
             console.log(response);
             console.log(json);  
-            console.log(`${FormValues}`);  
         } catch (err) {
             console.error(err);
         }

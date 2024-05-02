@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import Funcionario from './poo/Funcionario.js'
+import registerRoute from './routes/Register.js';
 
 const port = 3000;
 const app = express();
@@ -8,14 +8,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use('/cadastrar', registerRoute);
+
 app.get('/', (req, res) => {
     res.send("Servidor backend rodando blz");
-});
-
-app.post('/cadastrarFuncionario', (req, res) => {
-    const { name, age, cpf, position, salary } = req.body;
-    const novoFuncionario = new Funcionario(name, age, cpf, position, salary);
-    res.send(novoFuncionario);
 });
 
 try {
