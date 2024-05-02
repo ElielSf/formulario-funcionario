@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import Funcionario from '../../poo/Funcionario.js'
+import Funcionario from './poo/Funcionario.js'
 
 const port = 3000;
 const app = express();
