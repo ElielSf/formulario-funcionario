@@ -1,0 +1,67 @@
+.PersonForm {
+    width: 95%;
+    max-width: 1100px;
+    height: 95%;
+    max-height: 600px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    border-radius: 10px;
+    background-color: white;
+}
+
+.PersonForm_image {
+    width: 65%;
+    height: 100%;
+}
+
+.PersonForm_form {
+    width: 35%;
+    min-width: 375px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: rgb(110, 32, 255);
+    border: none;
+    border-radius: 10px;
+    box-shadow: -10px 0px 10px rgb(201, 201, 201);
+}
+
+@media screen and (orientation: portrait) {
+    .PersonForm_image {
+        height: 45%;
+        width: 100%;
+    }
+    .PersonForm_form {
+        height: 55%;
+        width: 100%;
+    }
+}
+
+.PersonForm_input {
+    width: 90%;
+    height: 7%;
+    min-height: 44px;
+
+    align-self: center;
+    margin: 10px;
+    border: 1px solid transparent;
+    border-radius: 22px;
+    box-shadow: 0px 0px 5px 1px grey;
+}
+
+.PersonForm_button {
+    width: 90%;
+    height: 7%;
+    min-height: 46px;
+
+    align-self: center;
+
+    border: 1px solid transparent;
+    border-radius: 22px;
+    box-shadow: 0px 0px 5px 1px grey;
+}

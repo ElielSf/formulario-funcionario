@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import registerRoute from './routes/Register.js';
+import registerRoute from './src/routes/Register.js';
 
 const port = 3000;
 const app = express();

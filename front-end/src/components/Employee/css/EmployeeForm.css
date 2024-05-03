@@ -1,6 +1,8 @@
-.Form {
-    width: 100%;
+.EmployeeForm {
     height: 100%;
+    max-height: 330px;
+    width: 100%;
+    max-width: 270px;
 
     display: flex;
     flex-direction: column;
@@ -11,12 +13,12 @@
     box-shadow: 0px 0px 10px 3px rgb(143, 143, 143);
 }
 
-.Form_label {
+.EmployeeForm_label {
     margin-left: 4%;
     padding-top: 1%;
 }
 
-.Form_input {
+.EmployeeForm_input {
     width: 87%;
     height: 10%;
     max-height: 25px;
@@ -29,7 +31,7 @@
     border-radius: 3px;
 }
 
-.Form_button {
+.EmployeeForm_button {
     margin-top: 4%;
     width: 90%;
 
