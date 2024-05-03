@@ -2,7 +2,7 @@ import { useState } from "react"
 import './css/PersonForm.css'
 
 export default function PersonForm() {
-    const [PersonForm, setPersonForm] = useState({
+    const [personForm, setPersonForm] = useState({
         name: '',
         age: 0,
         cpf: ''
@@ -24,7 +24,7 @@ export default function PersonForm() {
                 headers: {
                     'Content-type': 'application/json'
                 },
-                body: JSON.stringify(PersonForm)
+                body: JSON.stringify(personForm)
             });
             const json = await response.json();
             console.log(response);
@@ -40,21 +40,21 @@ export default function PersonForm() {
                 <input className='PersonForm_input' name='name' 
                     type='text' 
                     placeholder='Nome'
-                    value={PersonForm.name}
+                    value={personForm.name}
                     onChange={handleChange}
                     required/>
 
                 <input className='PersonForm_input' name='age' 
                     type='number' 
                     placeholder='Idade'
-                    value={PersonForm.age}
+                    value={personForm.age}
                     onChange={handleChange}
                     required/>
 
                 <input className='PersonForm_input' name='cpf'
                     type='text'
                     placeholder='CPF'
-                    value={PersonForm.cpf}
+                    value={personForm.cpf}
                     onChange={handleChange}
                     required/>
 

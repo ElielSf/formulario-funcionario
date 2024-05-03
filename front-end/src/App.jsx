@@ -1,14 +1,12 @@
-//import EmployeeForm from './components/Employee/EmployeeForm.jsx'
-import PersonForm from './components/Person/PersonForm.jsx'
+import Header from './components/Header/Header.jsx'
+import { Outlet } from 'react-router-dom'
 import './css/App.css'
 
-function App() {
-
+export default function App() {
   return (
     <div className='App'>
-      <PersonForm />
+      <header><Header /></header>
+      <Outlet />
     </div>
   )
 }
-
-export default App
