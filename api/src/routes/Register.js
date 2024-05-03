@@ -10,11 +10,11 @@ router.use(express.json());
 
 router.get('/pessoa', (req, res) => {
     //res.sendFile(path.join(__dirname, 'index.html'));
-    //res.render('index');
+    res.send({ messagem: 'rota get'});
 });
 
 router.get('/funcionario', (req, res) => {
-
+    res.send({ messagem: 'rota get'});
 });
 
 router.post('/pessoa', (req, res) => {

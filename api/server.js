@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import registerRoute from './src/routes/Register.js';
 
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.json());
@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
 });
 
 try {
-    app.listen(port, () => {
-        console.log(`Servidor rodando em: https://localhost:${port}`);
+    app.listen(PORT, () => {
+        console.log(`Servidor rodando em: https://localhost:${PORT}`);
     });
 } catch (err) {
     console.error(err);
-}
+};

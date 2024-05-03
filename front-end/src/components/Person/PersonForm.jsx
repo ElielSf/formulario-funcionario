@@ -36,9 +36,6 @@ export default function PersonForm() {
 
     return (
         <form className='PersonForm' onSubmit={handleSubmit}>
-            <div className='PersonForm_image'>
-                <img src='' alt='Imagem de uma pessoa' />
-            </div>
             <div className='PersonForm_form'>
                 <input className='PersonForm_input' name='name' 
                     type='text' 
